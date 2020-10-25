@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
 
-    bool pause = false;
+   // bool pause = false;
     bool up = true;
     bool down = false;
     bool right = false;
@@ -35,8 +35,10 @@ public class Movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
 
-        CarRotate();
+
         Rotat();
+        CarRotate();
+       
 
     }
 
@@ -54,65 +56,50 @@ public class Movement : MonoBehaviour
 
     void CarRotate()
     {
-        //This doesnt work which means car atm can only face 4 directions
-        /*
+        if (body.velocity == new Vector2(0, 0))
+        {
+            body.angularVelocity = 0;
+        }
+      
+        
         if (right && up)
         {
             cars.transform.eulerAngles = new Vector3(0, 0, 135);
-            Debug.Log("pelaselord");
+            Debug.Log("up right");
 
         }
-
-        if (left && up)
+        else if (left && up)
         {
-            cars.transform.eulerAngles = new Vector3(0, 0, -45);
-            Debug.Log("pelaselord");
+            cars.transform.eulerAngles = new Vector3(0, 0, 45);
+            Debug.Log("up left");
 
-        }*/
-
-        if (right)
+        }
+        else if (right && down)
         {
-            if (pause == false)
-            {
+            cars.transform.eulerAngles = new Vector3(0, 0, 225);
+        }
+        else if (left && down)
+        {
+            cars.transform.eulerAngles = new Vector3(0, 0, 315);
+        }
+        else if (right)
+        { 
                 cars.transform.eulerAngles = new Vector3(0, 0, 90);
-
-                pause = true;
-            }
         }
-
-
-        if (up)
+        else if (up)
         {
-            if (pause == false)
-            {
                 cars.transform.eulerAngles = new Vector3(0, 0, 0);
-
-                pause = true;
-            }
-            //continuous rotates, need it to only do once
         }
-
-        if (down)
+        else if (down)
         {
-            if (pause == false)
-            {
                 cars.transform.eulerAngles = new Vector3(0, 0, 180);
 
-                pause = true;
-            }
         }
-
-        if (left)
+       else if (left)
         {
             cars.transform.eulerAngles = new Vector3(0, 0, -90);
-
-            if (pause == false)
-            {
-                pause = true;
-
-
-            }
         }
+     
     }
 
     void Rotat()
@@ -126,7 +113,6 @@ public class Movement : MonoBehaviour
         else
         {
             up = false;
-            pause = false;
         }
 
         if (vertical == -1)
@@ -136,7 +122,6 @@ public class Movement : MonoBehaviour
         else
         {
             down = false;
-            pause = false;
         }
 
         if (horizontal == 1)
@@ -147,18 +132,15 @@ public class Movement : MonoBehaviour
         else
         {
             right = false;
-            pause = false;
         }
 
         if (horizontal == -1)
         {
             left = true;
-
         }
         else
         {
             left = false;
-            pause = false;
         }
     }
 
