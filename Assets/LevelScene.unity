@@ -3848,7 +3848,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01889baf73b91ed4cae9e1e3324e34d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1691069564}
+  player: {fileID: 1691069564}
+  cam: {fileID: 1018370543}
+  screenWidth: 0
+  screenHeight: 0
+  TRscreenBounds: {x: 0, y: 0, z: 0}
+  BLscreenBounds: {x: 0, y: 0, z: 0}
 --- !u!81 &1018370542
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3907,8 +3912,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018370540}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -108.8, y: -73.4, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.99, y: 2.24, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7024,8 +7029,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691069561}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -108.78, y: -73.45, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.57009864, y: 2.12, z: 0}
   m_LocalScale: {x: 0.3, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
