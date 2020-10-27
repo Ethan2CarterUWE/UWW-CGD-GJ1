@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    float current_time = 0;
-    float starting_time = 300; //5mins
-
+    public addScore score;
+    public float current_time = 0;
+    float starting_time = 60; 
     public TextMeshProUGUI countdown_text;
 
     // Start is called before the first frame update
@@ -22,5 +23,10 @@ public class Timer : MonoBehaviour
     {
         current_time -= 1 * Time.deltaTime;
         countdown_text.text = current_time.ToString("0");
+
+        if (current_time <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
