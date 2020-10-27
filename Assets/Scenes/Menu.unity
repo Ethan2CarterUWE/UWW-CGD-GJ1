@@ -350,7 +350,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20.1}
-  m_SizeDelta: {x: 160, y: 19.8}
+  m_SizeDelta: {x: 300, y: 19.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475663188
 MonoBehaviour:
@@ -474,7 +474,7 @@ RectTransform:
   m_GameObject: {fileID: 605403067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.96, y: 0.96, z: 0.96}
   m_Children:
   - {fileID: 1272062243}
   m_Father: {fileID: 1520847464}
@@ -483,7 +483,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.0000019073486}
-  m_SizeDelta: {x: 160, y: 19.8}
+  m_SizeDelta: {x: 300, y: 19.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605403069
 MonoBehaviour:
@@ -1108,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -116.8, y: -8.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272062244
@@ -1131,9 +1131,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'CARS
-
-'
+  m_text: PLAY - Modern Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5237962fbc12a44990f338f9f2c9369, type: 2}
   m_sharedMaterial: {fileID: -7132169742954878706, guid: f5237962fbc12a44990f338f9f2c9369,
@@ -1203,10 +1201,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1272062244}
-    characterCount: 5
+    characterCount: 22
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1425,7 +1423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -116.8, y: -8.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639630120
@@ -1448,7 +1446,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'PLAY
+  m_text: 'PLAY - Retro Movement
 
 '
   m_isRightToLeft: 0
@@ -1520,10 +1518,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1639630120}
-    characterCount: 5
+    characterCount: 22
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 4
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
