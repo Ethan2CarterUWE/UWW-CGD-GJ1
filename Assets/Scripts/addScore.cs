@@ -5,6 +5,7 @@ using UnityEngine;
 public class addScore : MonoBehaviour
 {
     public hasPassanger rider;
+    public Timer time;
     public scoreScript score_script;
 
     void Start()
@@ -18,6 +19,7 @@ public class addScore : MonoBehaviour
         {
             Debug.Log("TriggerPassenger");
             score_script.current_score += 100;
+            time.current_time += 20;
             rider.rider = false;
         }
     }
