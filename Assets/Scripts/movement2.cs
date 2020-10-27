@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class movement2 : MonoBehaviour
@@ -10,9 +12,25 @@ public class movement2 : MonoBehaviour
     public float maxSpeed = 0.05f;
     public float maxReverse = 0.01f;
 
+    CarChoice Choice;
+
+
     void Start()
     {
+        Choice = GameObject.FindObjectOfType<CarChoice>();
+
         acceleration = new Vector3(0, 0, 0);
+
+
+        if (!Choice.ModernMovement)
+        {
+            this.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+
+        }
 
     }
 
@@ -62,6 +80,15 @@ public class movement2 : MonoBehaviour
 
         Moving();
         Debug.Log(acceleration.y);
+
+        if (Input.GetKey("escape"))
+        {
+            Choice.delete = true;
+            //Choice.RetroMovement = false;
+
+            SceneManager.LoadScene("Menu");
+
+        }
     }
 
     void Moving()

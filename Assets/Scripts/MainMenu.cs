@@ -12,15 +12,29 @@ public class MainMenu : MonoBehaviour
     public Button button2;
     public Button button3;
 
+    public bool retro = false;
+    public bool modern = false;
+
+
     public int buttonIndex = 0;
 
     public void PlayGame()
     {
+        retro = true;
         SceneManager.LoadScene("LevelScene");
     }
 
+    public void ModernMovement()
+    {
+        modern = true;
+        SceneManager.LoadScene("LevelScene");
+    }
+
+
     public void QuitGame()
     {
+      
+
         Application.Quit();
     }
 
