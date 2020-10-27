@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour
         
         if (right && up)
         {
-            cars.transform.eulerAngles = new Vector3(0, 0, 135);
+            cars.transform.eulerAngles = new Vector3(0, 0, 315);
             Debug.Log("up right");
 
         }
@@ -107,11 +107,11 @@ public class Movement : MonoBehaviour
         }
         else if (left && down)
         {
-            cars.transform.eulerAngles = new Vector3(0, 0, 315);
+            cars.transform.eulerAngles = new Vector3(0, 0, 135);
         }
         else if (right)
         { 
-                cars.transform.eulerAngles = new Vector3(0, 0, 90);
+                cars.transform.eulerAngles = new Vector3(0, 0, -90);
         }
         else if (up)
         {
@@ -124,7 +124,7 @@ public class Movement : MonoBehaviour
         }
        else if (left)
         {
-            cars.transform.eulerAngles = new Vector3(0, 0, -90);
+            cars.transform.eulerAngles = new Vector3(0, 0, 90);
         }
      
     }
