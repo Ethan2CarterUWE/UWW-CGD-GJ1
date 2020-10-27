@@ -14,7 +14,7 @@ public class CameraScript : MonoBehaviour
     void Start()
 	{
        
-        screenWidth = cam.orthographicSize *2;
+        //screenWidth = cam.orthographicSize *2;
     }
 
 
