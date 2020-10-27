@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 //[RequireComponent(typeof(Rigidbody2D))]
@@ -34,6 +36,13 @@ public class Movement : MonoBehaviour
         // Gives a value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+
+       if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene("Menu");
+
+        }
 
 
         Rotat();
