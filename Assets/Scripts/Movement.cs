@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
     Rigidbody2D body;
     public GameObject cars;
 
+    CarChoice Choice;
+
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
@@ -27,8 +29,19 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        Choice = GameObject.FindObjectOfType<CarChoice>();
+
         body = GetComponent<Rigidbody2D>();
         y = transform.rotation.z;
+
+        if (!Choice.RetroMovement)
+        {
+            this.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+        }
     }
 
     void Update()
@@ -40,6 +53,8 @@ public class Movement : MonoBehaviour
 
        if (Input.GetKey("escape"))
         {
+
+            //Choice.RetroMovement = false;
             SceneManager.LoadScene("Menu");
 
         }

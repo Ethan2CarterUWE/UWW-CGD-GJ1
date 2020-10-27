@@ -10,9 +10,25 @@ public class movement2 : MonoBehaviour
     public float maxSpeed = 0.05f;
     public float maxReverse = 0.01f;
 
+    CarChoice Choice;
+
+
     void Start()
     {
+        Choice = GameObject.FindObjectOfType<CarChoice>();
+
         acceleration = new Vector3(0, 0, 0);
+
+
+        if (!Choice.ModernMovement)
+        {
+            this.enabled = false;
+        }
+        else
+        {
+            this.enabled = true;
+
+        }
 
     }
 
