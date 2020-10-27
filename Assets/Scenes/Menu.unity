@@ -1258,9 +1258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435d17f913ac9ed4aa80293b1614c901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button1: {fileID: 0}
-  button2: {fileID: 0}
-  button3: {fileID: 0}
+  button1: {fileID: 475663188}
+  button2: {fileID: 605403069}
+  button3: {fileID: 1992372678}
   retro: 0
   modern: 0
   buttonIndex: 0
