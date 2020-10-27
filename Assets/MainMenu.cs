@@ -4,56 +4,66 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+
+namespace taxi
 {
-
-    public Button button1;
-    public Button button2;
-    public Button button3;
-
-    public int buttonIndex = 0;
-
-    public void PlayGame()
+    public class MainMenu : MonoBehaviour
     {
-        SceneManager.LoadScene("LevelScene");
-    }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
+        public Button button1;
+        public Button button2;
+        public Button button3;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        public  bool retro = false;
+        public  bool modern = false;
+
+        public int buttonIndex = 0;
+
+        public void PlayGame()
         {
-            buttonIndex++;
-            if (buttonIndex > 2)
+            retro = true;
+
+            SceneManager.LoadScene("LevelScene");
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                buttonIndex = 0;
+                buttonIndex++;
+                if (buttonIndex > 2)
+                {
+                    buttonIndex = 0;
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            buttonIndex--;
-            if (buttonIndex < 0)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                buttonIndex = 2;
+                buttonIndex--;
+                if (buttonIndex < 0)
+                {
+                    buttonIndex = 2;
+                }
             }
-        }
 
-        //Update Highlighted Button
-        if (buttonIndex == 0)
-        {
-            button1.Select();
-        }
-        if (buttonIndex == 1)
-        {
-            button2.Select();
-        }
-        if (buttonIndex == 2)
-        {
-            button3.Select();
+            //Update Highlighted Button
+            if (buttonIndex == 0)
+            {
+                button1.Select();
+            }
+            if (buttonIndex == 1)
+            {
+                button2.Select();
+            }
+            if (buttonIndex == 2)
+            {
+                button3.Select();
+            }
         }
     }
 }
+
