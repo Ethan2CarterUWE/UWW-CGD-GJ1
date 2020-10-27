@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class movement2 : MonoBehaviour
@@ -78,6 +80,15 @@ public class movement2 : MonoBehaviour
 
         Moving();
         Debug.Log(acceleration.y);
+
+        if (Input.GetKey("escape"))
+        {
+            Choice.delete = true;
+            //Choice.RetroMovement = false;
+
+            SceneManager.LoadScene("Menu");
+
+        }
     }
 
     void Moving()

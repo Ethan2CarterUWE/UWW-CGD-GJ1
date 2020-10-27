@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
     Rigidbody2D body;
     public GameObject cars;
 
+
+    //public bool deleteww = false;
     CarChoice Choice;
 
     float horizontal;
@@ -53,8 +55,9 @@ public class Movement : MonoBehaviour
 
        if (Input.GetKey("escape"))
         {
-
+            Choice.delete = true;
             //Choice.RetroMovement = false;
+
             SceneManager.LoadScene("Menu");
 
         }
